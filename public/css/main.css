@@ -1,0 +1,90 @@
+:root {
+  --color1: #999;
+  --color2: #aaa;
+  --color3: #bbb;
+  --color4: #ccc;
+  --color5: #ddd;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background: linear-gradient(to top, rgba(76,76,76,1) 0%, rgb(62, 62, 62) 23%, rgb(44, 44, 44) 100%) no-repeat;
+}
+
+
+.ColorBoxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: stretch;
+  align-items: stretch;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50rem;
+  height: 10rem;
+}
+
+.ColorBox {
+  flex: 1 1 20%;
+  height: 100%;
+  background: grey;
+  transition: background-color .3s ease-out;
+}
+.ColorBox:nth-child(2) {
+  transition-delay: .05s;
+}
+.ColorBox:nth-child(3) {
+  transition-delay: .1s;
+}
+.ColorBox:nth-child(4) {
+  transition-delay: .15s;
+}
+.ColorBox:nth-child(5) {
+  transition-delay: .2s;
+}
+
+.ColorBox--color1 {
+  background-color: var(--color1);
+}
+
+.ColorBox--color2 {
+  background-color: var(--color2);
+}
+
+.ColorBox--color3 {
+  background-color: var(--color3);
+}
+
+.ColorBox--color4 {
+  background-color: var(--color4);
+}
+
+.ColorBox--color5 {
+  background-color: var(--color5);
+}
+
+
+.ThemeButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ThemeButton {
+  margin: 1rem;
+  padding: .5rem .75rem;
+  cursor: pointer;
+  border: 0;
+  border-radius: .3rem;
+}
+
+.ThemeButton:hover {
+  background: lightblue;
+}
